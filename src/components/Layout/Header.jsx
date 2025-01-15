@@ -36,7 +36,7 @@ function Header() {
                 />
               </span>
               <div className="flex-grow">
-                <button className="px-2 py-3 border-t border-b bg-white text-text_secondary min-w-[120px] max-w-[250px] text-right transition-all">
+                <button className="pr-2 py-3 m-0 border-t border-b bg-white text-text_secondary min-w-[120px] max-w-[250px] text-right transition-all">
                   All Categories
                 </button>
               </div>

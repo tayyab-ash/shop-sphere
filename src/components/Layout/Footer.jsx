@@ -1,54 +1,27 @@
-import React, { useReducer , useState} from 'react'
-import Todo from './Todo'
+import React, { useEffect, useReducer , useRef, useState} from 'react'
 
-export const ACTIONS = { 
-  ADD_TODO: 'add-todo',
-  TOGGLE_TODO: 'toggle-todo',
-  DELETE_TODO: 'delete-todo'
 
-}
-
-function reducer(todos, action) {
-   switch (action.type) {
-    case ACTIONS.ADD_TODO:
-      return [...todos, newTodo(action.payload.name)]
-    case ACTIONS.TOGGLE_TODO:
-      return todos.map(todo => {
-        if(todo.id === action.payload.id) {
-          return {...todo, complete: !todo.complete}
-        }
-        return todo;
-      })
-    case ACTIONS.DELETE_TODO:
-      return todos.filter(todo => todo.id !== action.payload.id)
-      
-   }
-
-}
-
-function newTodo(name) {
-  return { id: Date.now(), name: name, complete: false } 
-}
 
 function Footer() {
-  const [todos, dispatch] = useReducer(reducer, [])
-  const [name, setName] = useState('')
-  
-  const handleSubmit = (e) => { 
-    e.preventDefault()
-    dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name } })
-    setName('')
+  const [first, setfirst] = useState(0)
+  let a = 0;
+  let b = useRef(0);
+  let btnRef =useRef()
+
+  function handleClick() {
+    setfirst(first + 1);
+    
   }
+  useEffect(() => {
+    console.log(`Rendering.... ${a++} ... and ${b.current++}`)
+    btnRef.current.style.backgroundColor = 'red'
+  })
   
-  console.log(todos)
+
   return (
     <div>
-        <form onSubmit={handleSubmit} action="">
-            <input type="text" className='border-gray-950 border-2 mt-4 ml-4 outline-none p-2' value={name} onChange={e =>  setName(e.target.value)} />
-        </form>
-        {todos.map(todo => {
-          return <Todo key={todo.id} todo={todo} dispatch={dispatch} />
-        })}
+      <span>{first}</span>
+        <button ref={btnRef} onClick={handleClick}>Counter</button>
     </div>
   )
 }
