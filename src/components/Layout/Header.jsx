@@ -41,19 +41,19 @@ function Header() {
                 </button>
               </div>
               <button className="px-2 py-3 min-w-[50px] border bg-white text-text_secondary rounded-tr-md rounded-br-md transition-all">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
 
             <div className="flex text-2xl">
               <span>
-                <i class="m-3 fa-solid fa-user"></i>
+                <i className="m-3 fa-solid fa-user"></i>
               </span>
               <span>
-                <i class="m-3  fa-solid fa-heart"></i>
+                <i className="m-3  fa-solid fa-heart"></i>
               </span>
               <span>
-                <i class=" m-3 fa-solid fa-cart-shopping"></i>
+                <i className=" m-3 fa-solid fa-cart-shopping"></i>
               </span>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import './App.css'
-import Footer from './components/Layout/Footer'
+import Footer from './components/Layout/Footer';
 import Header from './components/Layout/Header'
 import {
   BrowserRouter as Router,
@@ -12,11 +12,11 @@ function App() {
   return (
     <>
     <Router>
-        <Header />
+        <Header/>
+        <Footer/>
       <Routes>
-        // Routes
       </Routes>
-        {/* <Footer /> */}
+        
     </Router>
     
     </>
