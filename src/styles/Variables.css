@@ -1,0 +1,17 @@
+:root {
+    /* color-scheme: light dark; */
+    --primary-color: #DBEBFF;
+    --text-primary: #222529;
+    --text-secondary: #777777;
+  }
+
+
+
+  /* [data-theme="dark"] {
+    --primary-color: #1abc9c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-color: #1abc9c;
+    }
+  } */
