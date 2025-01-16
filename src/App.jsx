@@ -10,25 +10,12 @@ import {
 
 
 function App() {
-  const [count, setCount] = useState(1);
-  const [word, setWord] = useState("good")
-
-  // const getWord = () => { 
-  //   return "another" + count; 
-  // } 
-
-  const getWord = useCallback(() => { 
-    return "another" + count; 
-  } ,[count]) 
-
   return (
     <>
     <Router>
         <Header/>
-        <Footer word={"good"} getWord={getWord} />
+        <Footer />
     </Router>
-    <button className='mr-4' onClick={() => setCount((prev) => prev + 1)}>Increment</button>
-      <span>{count}</span>
     </>
   )
 }
